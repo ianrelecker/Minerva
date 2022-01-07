@@ -17,6 +17,10 @@
 		8445B3C22774F10100C8CCB2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445B3AC2774F0FB00C8CCB2 /* Persistence.swift */; };
 		8445B3C32774F10100C8CCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445B3AD2774F10000C8CCB2 /* Assets.xcassets */; };
 		8445B3C42774F10100C8CCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445B3AD2774F10000C8CCB2 /* Assets.xcassets */; };
+		8445B3CE2774FBA000C8CCB2 /* detail view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445B3CD2774FB9F00C8CCB2 /* detail view.swift */; };
+		8445B3CF2774FBA000C8CCB2 /* detail view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445B3CD2774FB9F00C8CCB2 /* detail view.swift */; };
+		8445B3D12774FFD900C8CCB2 /* testdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445B3D02774FFD800C8CCB2 /* testdata.swift */; };
+		8445B3D22774FFD900C8CCB2 /* testdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445B3D02774FFD800C8CCB2 /* testdata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,8 @@
 		8445B3B22774F10000C8CCB2 /* Minerva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minerva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445B3B82774F10000C8CCB2 /* Minerva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minerva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445B3BA2774F10100C8CCB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		8445B3CD2774FB9F00C8CCB2 /* detail view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "detail view.swift"; sourceTree = "<group>"; };
+		8445B3D02774FFD800C8CCB2 /* testdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testdata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,8 @@
 				8445B3AC2774F0FB00C8CCB2 /* Persistence.swift */,
 				8445B3AD2774F10000C8CCB2 /* Assets.xcassets */,
 				8445B3A82774F0FB00C8CCB2 /* Minerva.xcdatamodeld */,
+				8445B3CD2774FB9F00C8CCB2 /* detail view.swift */,
+				8445B3D02774FFD800C8CCB2 /* testdata.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -135,9 +143,11 @@
 				TargetAttributes = {
 					8445B3B12774F10000C8CCB2 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					8445B3B72774F10000C8CCB2 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -185,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8445B3BD2774F10100C8CCB2 /* MinervaApp.swift in Sources */,
+				8445B3D12774FFD900C8CCB2 /* testdata.swift in Sources */,
+				8445B3CE2774FBA000C8CCB2 /* detail view.swift in Sources */,
 				8445B3C12774F10100C8CCB2 /* Persistence.swift in Sources */,
 				8445B3BB2774F10100C8CCB2 /* Minerva.xcdatamodeld in Sources */,
 				8445B3BF2774F10100C8CCB2 /* ContentView.swift in Sources */,
@@ -196,6 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8445B3BE2774F10100C8CCB2 /* MinervaApp.swift in Sources */,
+				8445B3D22774FFD900C8CCB2 /* testdata.swift in Sources */,
+				8445B3CF2774FBA000C8CCB2 /* detail view.swift in Sources */,
 				8445B3C22774F10100C8CCB2 /* Persistence.swift in Sources */,
 				8445B3BC2774F10100C8CCB2 /* Minerva.xcdatamodeld in Sources */,
 				8445B3C02774F10100C8CCB2 /* ContentView.swift in Sources */,
@@ -321,8 +335,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M76F34UQ7G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -340,6 +356,8 @@
 				PRODUCT_NAME = Minerva;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Minerva (iOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,8 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M76F34UQ7G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -369,6 +389,7 @@
 				PRODUCT_NAME = Minerva;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Minerva (iOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -380,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -397,6 +419,8 @@
 				PRODUCT_NAME = Minerva;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Minerva (macOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -406,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -423,6 +448,7 @@
 				PRODUCT_NAME = Minerva;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Minerva (macOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
